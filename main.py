@@ -11,7 +11,7 @@ intents: Intents = Intents.default()
 intents.message_content = True
 client: Client = Client(intents=intents)
 
-cache_dir: str = ""
+cache_dir: str = "/home/karri/transrator_cache"
 if cache_dir == "":
     print("Cache dir not defined")
     exit()
@@ -32,6 +32,9 @@ async def on_message(message: Message) -> None:
 
     username: str = str(message.author)
     user_message: str = message.content
+
+    if len(user_message) == 0:
+           return
 
     if user_message[0] != "!":
         return

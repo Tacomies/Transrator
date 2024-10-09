@@ -4,3 +4,5 @@
 * gTTS
 * Lang-detect
 * python-dotenv
+* Pillow
+* pytesseract
